@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'directivas';
+
+  listEstudiantes: any[] = [
+    // Lista 
+    { nombre: "Joaquin Gonzales", estado: "Activo", id: 45 },
+    { nombre: "Anyel Ramirez", estado: "Regular", id: 17 },
+    { nombre: "Flor Garcia", estado: "Activo", id: 78 },
+    { nombre: "Anahis Aguilera", estado: "Regular", id: 78 },
+    { nombre: "Antonio Cuadra", estado: "Activo", id: 78 }
+  ]
 }

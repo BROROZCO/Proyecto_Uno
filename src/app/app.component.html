@@ -1,1 +1,35 @@
-<h1>Hola mundo 2</h1>
+<div class="container mt-4">
+
+  <div class="row">
+
+    <h3>Listado de estudiantes</h3>
+    <br>
+    <table class="table">
+
+      <!-- Cabecera de la tabla -->
+      <thead>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Estado</th>
+      </thead>
+      <!-- Cuerpo de la tabla -->
+      <tbody>
+        <!-- Agregando la directiva *ngFor para hacer las peticiones al backend-->
+        <!-- Es un for que recorre un array hecho en el TypeScript, la directiva -->
+        <tr *ngFor="let estudiantes of listEstudiantes; let i =index">
+
+          <!-- <td>{{estudiantes.id}}</td> -->
+          <!-- Se obtiene un indice  -->
+          <td>{{ i  + 1 }}</td>  
+          <td>{{ estudiantes.nombre }}</td>
+          <td>{{ estudiantes.estado }}</td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>
