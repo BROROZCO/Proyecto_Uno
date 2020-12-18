@@ -26,7 +26,9 @@
           <!-- Se obtiene un indice  -->
           <td>{{ i  + 1 }}</td>  
           <td>{{ estudiantes.nombre }}</td>
-          <td>{{ estudiantes.estado }}</td>
+          <!-- Uso de directiva *ngStyle -->
+          <!-- usando el operador ternario '?'  ':' -->
+          <td [ngStyle]="{'font-style': estudiantes.estado === 'Regular' ? 'italic' : 'normal'}" >{{ estudiantes.estado }}</td>
 
         </tr>
 
