@@ -3,9 +3,13 @@
   <div class="row">
 
     <h3>Listado de estudiantes</h3>
-    <br>
-    <table class="table">
+    <button class="btn btn-primary ml-auto" (click)="toogle()">Toogle</button>
 
+  </div>
+
+    <br>
+    <!-- Directiva *ngIF como un if pero desde el backend -->
+    <table class="table" *ngIf="mostrar">
       <!-- Cabecera de la tabla -->
       <thead>
         <th>ID</th>
@@ -29,7 +33,6 @@
       </tbody>
 
     </table>
-
-  </div>
+    <h3 *ngIf="listEstudiantes.length === 0">No hay registros para mostrar</h3>
 
 </div>
