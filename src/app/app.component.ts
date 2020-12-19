@@ -12,9 +12,10 @@ export class AppComponent {
     // Lista 
     { nombre: "Joaquin Gonzales", estado: "Activo", id: 45 },
     { nombre: "Anyel Ramirez", estado: "Regular", id: 17 },
-    { nombre: "Flor Garcia", estado: "Activo", id: 78 },
-    { nombre: "Anahis Aguilera", estado: "Regular", id: 78 },
-    { nombre: "Antonio Cuadra", estado: "Activo", id: 78 } 
+    { nombre: "Flor Garcia", estado: "Activo", id: 74 },
+    { nombre: "Anahis Aguilera", estado: "Regular", id: 91 },
+    { nombre: "Antonio Cuadra", estado: "Activo", id: 78 } ,
+    { nombre: "Nicolas Mora", estado: "Libre", id: 78 } 
   ]
 
   mostrar = true;

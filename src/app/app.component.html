@@ -21,19 +21,30 @@
       <tbody>
         <!-- Agregando la directiva *ngFor para hacer las peticiones al backend-->
         <!-- Es un for que recorre un array hecho en el TypeScript, la directiva -->
-        <tr *ngFor="let estudiantes of listEstudiantes; let i =index">
+        <tr *ngFor="let estudiantes of listEstudiantes; let i =index" [ngSwitch]="estudiantes.estado">
 
           <!-- <td>{{estudiantes.id}}</td> -->
           <!-- Se obtiene un indice  -->
           <td>{{ i  + 1 }}</td>  
           <td>
-            <span [ngClass]="estudiantes.nombre === 'Joaquin Gonzales' ? 'text-primary' : 'text-success' " >
+            <span [ngClass]="estudiantes.nombre === 'Joaquin Gonzales' ? 'text-primary' : 'text-success'" >
               {{ estudiantes.nombre }}
             </span>
           </td>
           <!-- Uso de directiva *ngStyle -->
           <!-- usando el operador ternario '?'  ':' -->
-          <td [ngStyle]="{'font-style': estudiantes.estado === 'Regular' ? 'italic' : 'normal'}" >{{ estudiantes.estado }}</td>
+          <!-- <td [ngStyle]="{'font-style': estudiantes.estado === 'Regular' ? 'italic' : 'normal'}" >{{ estudiantes.estado }}</td> -->
+         
+         <!-- Es tomado como una opcion cada Case en caso contrario ignora la etiqueta -->
+          <td *ngSwitchCase="'Activo'" class="bg-primary">
+            {{ estudiantes.estado }}
+          </td>
+          <td *ngSwitchCase="'Regular'" class="bg-success">
+            {{ estudiantes.estado }}
+          </td>
+          <td *ngSwitchCase="'Libre'" class="bg-warning">
+            {{ estudiantes.estado }}
+          </td>
 
         </tr>
 
