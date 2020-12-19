@@ -1,3 +1,4 @@
+
 <div class="container mt-4">
 
   <div class="row">
@@ -25,7 +26,11 @@
           <!-- <td>{{estudiantes.id}}</td> -->
           <!-- Se obtiene un indice  -->
           <td>{{ i  + 1 }}</td>  
-          <td>{{ estudiantes.nombre }}</td>
+          <td>
+            <span [ngClass]="estudiantes.nombre === 'Joaquin Gonzales' ? 'text-primary' : 'text-success' " >
+              {{ estudiantes.nombre }}
+            </span>
+          </td>
           <!-- Uso de directiva *ngStyle -->
           <!-- usando el operador ternario '?'  ':' -->
           <td [ngStyle]="{'font-style': estudiantes.estado === 'Regular' ? 'italic' : 'normal'}" >{{ estudiantes.estado }}</td>
@@ -35,6 +40,7 @@
       </tbody>
 
     </table>
-    <h3 *ngIf="listEstudiantes.length === 0">No hay registros para mostrar</h3>
+    <!-- <h3 *ngIf="listEstudiantes.length === 0">No hay registros para mostrar</h3> -->
+    <h3 *ngIf="mostrar == false">No hay registros para mostrar</h3>
 
 </div>
